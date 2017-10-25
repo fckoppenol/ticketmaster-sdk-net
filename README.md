@@ -10,8 +10,8 @@ https://developer.ticketmaster.com/products-and-docs/apis/international-discover
       CategoryIds = new List<int> { 10001 },
       Lang = "en-us",
       IsSeatsAvailable = true,
-      SortBy = EventSearchArguments.SortOptions.Popularity,
-      Order = EventSearchArguments.OrderOptions.Descending,
+      SortBy = EventSearch.SortOptions.Popularity,
+      Order = EventSearch.OrderOptions.Descending,
       Rows = 250
   };
 
