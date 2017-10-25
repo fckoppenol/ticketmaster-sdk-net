@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Tourspider.Ticketmaster.Sdk;
+
 using Tourspider.Ticketmaster.Sdk.Interfaces;
 
 

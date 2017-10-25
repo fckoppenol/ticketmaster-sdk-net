@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using Tourspider.Ticketmaster.Sdk;
+
 
 namespace Tourspider.Ticketmaster.Sdk.Extensions
 {

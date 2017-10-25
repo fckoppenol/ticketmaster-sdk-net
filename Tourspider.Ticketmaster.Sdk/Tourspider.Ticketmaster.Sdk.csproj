@@ -70,11 +70,14 @@
     <Compile Include="Models\EventPrice.cs" />
     <Compile Include="Models\EventEntity.cs" />
     <Compile Include="Models\Image.cs" />
+    <Compile Include="Models\ImageUrl.cs" />
     <Compile Include="Models\PriceLevel.cs" />
     <Compile Include="Models\PriceRanges.cs" />
     <Compile Include="Models\PriceType.cs" />
     <Compile Include="Models\Promoter.cs" />
+    <Compile Include="Models\Seatmap.cs" />
     <Compile Include="Models\SeatmapTypes.cs" />
+    <Compile Include="Models\Static.cs" />
     <Compile Include="Models\TicketFees.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Attraction.cs" />

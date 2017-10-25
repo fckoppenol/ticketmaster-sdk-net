@@ -21,8 +21,7 @@ namespace Tourspider.Ticketmaster.Sdk
             MissingMemberHandling = MissingMemberHandling.Ignore,
             NullValueHandling = NullValueHandling.Include,
             DefaultValueHandling = DefaultValueHandling.Include
-        })
-        { }
+        }){ }
 
         /// <summary>
         /// Default serializer with overload for allowing custom Json.NET settings

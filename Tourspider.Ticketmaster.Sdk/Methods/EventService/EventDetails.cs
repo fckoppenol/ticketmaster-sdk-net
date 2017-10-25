@@ -1,9 +1,7 @@
 ﻿using System;
 using RestSharp;
-using Tourspider.Ticketmaster.Sdk;
 using Tourspider.Ticketmaster.Sdk.Extensions;
 using Tourspider.Ticketmaster.Sdk.Interfaces;
-using RestRequest = Tourspider.Ticketmaster.Sdk.RestRequest;
 
 namespace Tourspider.Ticketmaster.Sdk.Methods.EventService
 {

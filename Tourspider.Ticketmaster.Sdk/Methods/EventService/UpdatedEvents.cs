@@ -1,5 +1,4 @@
 ﻿using System;
-using Tourspider.Ticketmaster.Sdk;
 using Tourspider.Ticketmaster.Sdk.Extensions;
 using Tourspider.Ticketmaster.Sdk.Interfaces;
 

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-using Tourspider.Ticketmaster.Sdk;
 using Tourspider.Ticketmaster.Sdk.Extensions;
 using Tourspider.Ticketmaster.Sdk.Interfaces;
 
@@ -77,26 +76,60 @@ namespace Tourspider.Ticketmaster.Sdk.Methods.EventService
         /// </summary>
         public string EventName { private get; set; }
 
+        /// <summary>
+        /// The latitude of the required search location. Example: 59.9047.
+        /// </summary>
         public double? Latitude { private get; set; }
 
+        /// <summary>
+        /// The longitude of the required search location. Example: 10.7497.
+        /// </summary>
         public double? Longitude { private get; set; }
 
+        /// <summary>
+        /// The radius to be applied to results where a location (lat, long) is used as a search parameter. The radius is given in km. 
+        /// The default language is specified in the Domains List service. Usually two or three languages are supported. Example: 50.
+        /// </summary>
         public int? RadiusInKm { private get; set; }
 
+        /// <summary>
+        /// The start date of the event for a date range search. Dates are always given in UTC. 
+        /// The date should be in format yyyy-MM-dd’T’HH:mm:ssZ. Example: 2015-02-01T10:00:00Z.
+        /// </summary>
         public DateTime? EventDateFrom { private get; set; }
 
+        /// <summary>
+        /// The end date of the event for a date range search. 
+        /// Dates are always given in UTC. The date should be in format yyyy-MM-dd’T’HH:mm:ssZ.
+        /// </summary>
         public DateTime? EventDateTo { private get; set; }
 
+        /// <summary>
+        /// The start date of the event for a date range search. 
+        /// Dates are always given in UTC. The date should be in format yyyy-MM-dd’T’HH:mm:ssZ. Example: 2015-02-01T10:00:00Z.
+        /// </summary>
         public DateTime? OnSaleDateFrom { private get; set; }
 
+        /// <summary>
+        /// The end date of the event for a date range search. Dates are always given in UTC. 
+        /// The date should be in format yyyy-MM-dd’T’HH:mm:ssZ.
+        /// </summary>
         public DateTime? OnSaleDateTo { private get; set; }
-
+        
+        /// <summary>
+        /// A flag which when set to ‘true’ returns external events, which were events from other 
+        /// Ticketmaster platforms or partners with a more limited set of data fields in the response.
+        /// </summary>
         public bool? IncludeExternalEvents { private get; set; }
 
         /// <summary>
         /// A flag which when set to ‘true’ gives only events which still have tickets available on sale.
         /// </summary>
-        public bool? IsSeatsAvailable { private get; set; } = true;
+        public bool? IsSeatsAvailable { private get; set; }
+        
+        public bool? IsNotCancelled { private get; set; }
+
+        public bool? IsNotPackage { private get; set; }
 
         public int? CountryId { private get; set; }
 
@@ -157,8 +190,10 @@ namespace Tourspider.Ticketmaster.Sdk.Methods.EventService
             restRequest.AddQueryParameterIfNotEmpty("eventdate_to", EventDateTo);
             restRequest.AddQueryParameterIfNotEmpty("onsaledate_from", OnSaleDateFrom);
             restRequest.AddQueryParameterIfNotEmpty("onsaledate_to", OnSaleDateTo);
-            restRequest.AddQueryParameterIfNotEmpty("is_seats_available", IsSeatsAvailable);
             restRequest.AddQueryParameterIfNotEmpty("include_external_events", IncludeExternalEvents);
+            restRequest.AddQueryParameterIfNotEmpty("is_seats_available", IsSeatsAvailable);
+            restRequest.AddQueryParameterIfNotEmpty("is_not_cancelled", IsNotCancelled); 
+            restRequest.AddQueryParameterIfNotEmpty("is_not_package", IsNotPackage);
             restRequest.AddQueryParameterIfNotEmpty("country_id", CountryId);
             restRequest.AddQueryParameterIfNotEmpty("sort_by", SortBy.GetValue());
             restRequest.AddQueryParameterIfNotEmpty("order", Order.GetValue());

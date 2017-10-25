@@ -1,5 +1,5 @@
 ﻿using RestSharp;
-using RestRequest = Tourspider.Ticketmaster.Sdk.RestRequest;
+
 
 namespace Tourspider.Ticketmaster.Sdk.Methods
 {
