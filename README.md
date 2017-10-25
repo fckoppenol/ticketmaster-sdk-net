@@ -1,5 +1,7 @@
 # ticketmaster-sdk-net
 
+https://developer.ticketmaster.com/products-and-docs/apis/international-discovery/
+
 ```
   var discoveryClient = new DiscoveryClient({apiKey});
 
