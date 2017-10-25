@@ -2,7 +2,7 @@
 
 namespace Tourspider.Ticketmaster.Sdk.Models
 {
-    public partial class Attraction
+    public class Attraction
     {
         [JsonProperty("name")]
         public string Name { get; set; }

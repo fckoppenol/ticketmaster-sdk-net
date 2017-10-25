@@ -1,9 +1,6 @@
 ﻿using System.Threading.Tasks;
-
-using Tourspider.Ticketmaster.Sdk.Methods.EventService;
 using Tourspider.Ticketmaster.Sdk.Methods.EventService;
 using Tourspider.Ticketmaster.Sdk.Models;
-using TourSpider.Ticketmaster.Sdk.Models;
 
 namespace Tourspider.Ticketmaster.Sdk.Extensions
 {
@@ -24,9 +21,9 @@ namespace Tourspider.Ticketmaster.Sdk.Extensions
             return discoveryClient.Query<EventDetails, Event>(arguments);
         }
 
-        public static Task<Response<EventDetailsResponse>> EventDetailsAsync(this DiscoveryClient discoveryClient, EventDetailsArguments arguments)
+        public static Task<Response<Event>> EventDetailsAsync(this DiscoveryClient discoveryClient, EventDetailsArguments arguments)
         {
-            return discoveryClient.QueryAsync<EventDetails, EventDetailsResponse>(arguments);
+            return discoveryClient.QueryAsync<EventDetails, Event>(arguments);
         }
         
         public static Response<EventCollection> UpdatedEvents(this DiscoveryClient discoveryClient, UpdatedEventsArguments arguments)
