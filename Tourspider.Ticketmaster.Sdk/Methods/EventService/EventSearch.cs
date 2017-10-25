@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Runtime.Serialization;
 using Tourspider.Ticketmaster.Sdk.Extensions;
 using Tourspider.Ticketmaster.Sdk.Interfaces;
@@ -12,10 +13,7 @@ namespace Tourspider.Ticketmaster.Sdk.Methods.EventService
     public class EventSearch : Request
     {
         public override string Resource => "/events";
-    }
 
-    public class EventSearchArguments : IRequestParameters
-    {
         public enum SortOptions
         {
             [EnumMember(Value = "eventname")]
@@ -35,7 +33,10 @@ namespace Tourspider.Ticketmaster.Sdk.Methods.EventService
             [EnumMember(Value = "desc")]
             Descending
         }
+    }
 
+    public class EventSearchArguments : IRequestParameters
+    {
         /// <summary>
         /// The unique identifier for the domain or market. 
         /// Although optional, this is recommended. Use a comma separated list of values to search multiple domains. (A logical OR search is performed).
@@ -45,7 +46,7 @@ namespace Tourspider.Ticketmaster.Sdk.Methods.EventService
         /// <summary>
         /// The language in ISO code format. The default language is specified in the Domains List service. Usually two or three languages are supported. Example: no-no.
         /// </summary>
-        public string Lang { private get; set; }
+        public CultureInfo Lang { private get; set; }
 
         /// <summary>
         /// The unique identifier for the attraction (which could be an artist, or sport, tour, package, play and so on). This is linked to domain. 
@@ -137,12 +138,12 @@ namespace Tourspider.Ticketmaster.Sdk.Methods.EventService
         /// The method for sorting the results. Proximity can only be used where a lat and long is used as a query parameter. 
         /// Default: eventdate. Possible values: eventdate , eventname , popularity , proximity .
         /// </summary>
-        public SortOptions SortBy { private get; set; } = SortOptions.EventDate;
+        public EventSearch.SortOptions SortBy { private get; set; } = EventSearch.SortOptions.EventDate;
 
         /// <summary>
         /// The order in which results are sorted, whether ascending or descending. Default: asc. Possible values: asc , desc 
         /// </summary>
-        public OrderOptions Order { private get; set; } = OrderOptions.Ascending;
+        public EventSearch.OrderOptions Order { private get; set; } = EventSearch.OrderOptions.Ascending;
 
         private int _rows = 10;
         /// <summary>

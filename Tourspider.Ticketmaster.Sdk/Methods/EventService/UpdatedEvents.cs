@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Tourspider.Ticketmaster.Sdk.Extensions;
 using Tourspider.Ticketmaster.Sdk.Interfaces;
 
@@ -26,7 +27,7 @@ namespace Tourspider.Ticketmaster.Sdk.Methods.EventService
         /// The language in ISO code format. 
         /// The default language is specified in the Domains List service. Usually two or three languages are supported. Example: no-no.
         /// </summary>
-        public string Lang { private get; set; }
+        public CultureInfo Lang { private get; set; }
 
 
         private int _rows = 10;

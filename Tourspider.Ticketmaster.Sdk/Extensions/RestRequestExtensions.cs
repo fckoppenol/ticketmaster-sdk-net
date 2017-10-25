@@ -7,6 +7,14 @@ namespace Tourspider.Ticketmaster.Sdk.Extensions
 {
     public static class RestRequestExtensions
     {
+        public static void AddQueryParameterIfNotEmpty(this RestRequest restRequest, string name, CultureInfo item)
+        {
+            if (item != null )
+            {
+                restRequest.AddQueryParameter(name, item.Name);
+            }
+        }
+
         public static void AddQueryParameterIfNotEmpty(this RestRequest restRequest, string name, List<string> list)
         {
             if (list != null && list.Count > 0)
