@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using TourSpider.Ticketmaster.Sdk;
-using TourSpider.TicketMaster.Api.Interfaces;
+using Tourspider.Ticketmaster.Sdk;
+using Tourspider.Ticketmaster.Sdk.Interfaces;
 
 
-namespace TourSpider.Ticketmaster.Sdk.Methods
+namespace Tourspider.Ticketmaster.Sdk.Methods
 {
     public class CategoryListArguments : IRequestParameters
     {

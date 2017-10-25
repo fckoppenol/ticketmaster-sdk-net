@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
-using TourSpider.Ticketmaster.Sdk;
-using TourSpider.Ticketmaster.Sdk.Methods.EventService;
-using TourSpider.TicketMaster.Api.Methods.EventService;
-using TourSpider.TicketMaster.Api.Models;
+using Tourspider.Ticketmaster.Sdk;
+using Tourspider.Ticketmaster.Sdk.Methods.EventService;
+using Tourspider.Ticketmaster.Sdk.Methods.EventService;
+using Tourspider.Ticketmaster.Sdk.Models;
 
-namespace TourSpider.Ticketmaster.Sdk.Extensions
+namespace Tourspider.Ticketmaster.Sdk.Extensions
 {
     public static class MethodExtensions
     {

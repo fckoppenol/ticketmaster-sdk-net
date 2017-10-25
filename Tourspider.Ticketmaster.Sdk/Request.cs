@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using RestSharp;
 
-namespace TourSpider.Ticketmaster.Sdk
+namespace Tourspider.Ticketmaster.Sdk
 {
     public abstract class Request
     {

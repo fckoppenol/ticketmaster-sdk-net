@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using RestSharp.Serializers;
 
-namespace TourSpider.Ticketmaster.Sdk
+namespace Tourspider.Ticketmaster.Sdk
 {
     /// <summary>
     /// Default JSON serializer for request bodies

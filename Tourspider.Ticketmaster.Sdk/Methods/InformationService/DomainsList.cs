@@ -1,4 +1,4 @@
-﻿namespace TourSpider.Ticketmaster.Sdk.Methods.InformationService
+﻿namespace Tourspider.Ticketmaster.Sdk.Methods.InformationService
 {
 
     //public class DomainsList : Request

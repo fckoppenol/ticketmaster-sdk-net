@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace TourSpider.Ticketmaster.Sdk.Models
+namespace Tourspider.Ticketmaster.Sdk.Models
 {
     public class DomainsListResponse
     {

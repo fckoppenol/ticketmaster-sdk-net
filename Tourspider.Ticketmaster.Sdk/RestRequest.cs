@@ -1,9 +1,8 @@
 ﻿using System;
 using RestSharp;
-using TourSpider.TicketMaster.Api;
-using TourSpider.TicketMaster.Api.Interfaces;
+using Tourspider.Ticketmaster.Sdk.Interfaces;
 
-namespace TourSpider.Ticketmaster.Sdk
+namespace Tourspider.Ticketmaster.Sdk
 {
     public class RestRequest : RestSharp.RestRequest
     {
@@ -11,7 +10,7 @@ namespace TourSpider.Ticketmaster.Sdk
 
         /// <inheritdoc />
         /// <summary>
-        /// Initializes a new instance of the <see cref="T:TourSpider.Ticketmaster.Sdk.RestRequest" /> class.
+        /// Initializes a new instance of the <see cref="T:Tourspider.Ticketmaster.Sdk.RestRequest" /> class.
         /// </summary>
         public RestRequest()
         {

@@ -1,6 +1,6 @@
-﻿using TourSpider.Ticketmaster.Sdk;
+﻿using Tourspider.Ticketmaster.Sdk;
 
-namespace TourSpider.Ticketmaster.Sdk.Methods.InformationService
+namespace Tourspider.Ticketmaster.Sdk.Methods.InformationService
 {
     public class CategoryList : Request
     {

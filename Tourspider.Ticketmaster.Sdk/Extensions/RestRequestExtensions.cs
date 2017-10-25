@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using TourSpider.Ticketmaster.Sdk;
+using Tourspider.Ticketmaster.Sdk;
 
-namespace TourSpider.Ticketmaster.Sdk.Extensions
+namespace Tourspider.Ticketmaster.Sdk.Extensions
 {
     public static class RestRequestExtensions
     {

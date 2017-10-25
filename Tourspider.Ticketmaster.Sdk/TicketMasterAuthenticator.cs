@@ -1,13 +1,13 @@
 ﻿using RestSharp;
 using RestSharp.Authenticators;
 
-namespace TourSpider.Ticketmaster.Sdk
+namespace Tourspider.Ticketmaster.Sdk
 {
-    internal class TicketMasterAuthenticator : IAuthenticator
+    internal class TicketmasterAuthenticator : IAuthenticator
     {
         private readonly string _apiKey;
 
-        public TicketMasterAuthenticator(string apiKey)
+        public TicketmasterAuthenticator(string apiKey)
         {
             _apiKey = apiKey;
         }

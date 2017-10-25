@@ -1,7 +1,7 @@
 ﻿using RestSharp;
-using RestRequest = TourSpider.Ticketmaster.Sdk.RestRequest;
+using RestRequest = Tourspider.Ticketmaster.Sdk.RestRequest;
 
-namespace TourSpider.Ticketmaster.Sdk.Methods
+namespace Tourspider.Ticketmaster.Sdk.Methods
 {
     public class DomainsListArguments
     {

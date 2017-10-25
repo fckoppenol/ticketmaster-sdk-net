@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-using TourSpider.Ticketmaster.Sdk;
-using TourSpider.TicketMaster.Api.Extensions;
-using TourSpider.TicketMaster.Api.Interfaces;
+using Tourspider.Ticketmaster.Sdk;
+using Tourspider.Ticketmaster.Sdk.Extensions;
+using Tourspider.Ticketmaster.Sdk.Interfaces;
 
-namespace TourSpider.Ticketmaster.Sdk.Methods.EventService
+namespace Tourspider.Ticketmaster.Sdk.Methods.EventService
 {
     /// <summary>
     /// Find events and filter your search by event type, location, date, availability, and much more.

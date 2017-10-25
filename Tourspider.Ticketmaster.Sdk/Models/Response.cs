@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace TourSpider.Ticketmaster.Sdk.Models
+namespace Tourspider.Ticketmaster.Sdk.Models
 {
     public class Response<T>
     {

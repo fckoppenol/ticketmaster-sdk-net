@@ -1,11 +1,11 @@
 ﻿using System;
 using RestSharp;
-using TourSpider.TicketMaster.Api;
-using TourSpider.TicketMaster.Api.Extensions;
-using TourSpider.TicketMaster.Api.Interfaces;
-using RestRequest = TourSpider.Ticketmaster.Sdk.RestRequest;
+using Tourspider.Ticketmaster.Sdk;
+using Tourspider.Ticketmaster.Sdk.Extensions;
+using Tourspider.Ticketmaster.Sdk.Interfaces;
+using RestRequest = Tourspider.Ticketmaster.Sdk.RestRequest;
 
-namespace TourSpider.Ticketmaster.Sdk.Methods.EventService
+namespace Tourspider.Ticketmaster.Sdk.Methods.EventService
 {
     /// <summary>
     /// Get details for a specific event using the unique identifer for the event. 

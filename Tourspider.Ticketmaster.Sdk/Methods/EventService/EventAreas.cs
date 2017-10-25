@@ -1,11 +1,11 @@
 ﻿using System;
 using RestSharp;
-using TourSpider.Ticketmaster.Sdk;
-using TourSpider.TicketMaster.Api.Extensions;
-using TourSpider.TicketMaster.Api.Interfaces;
-using RestRequest = TourSpider.Ticketmaster.Sdk.RestRequest;
+using Tourspider.Ticketmaster.Sdk;
+using Tourspider.Ticketmaster.Sdk.Extensions;
+using Tourspider.Ticketmaster.Sdk.Interfaces;
+using RestRequest = Tourspider.Ticketmaster.Sdk.RestRequest;
 
-namespace TourSpider.Ticketmaster.Sdk.Methods.EventService
+namespace Tourspider.Ticketmaster.Sdk.Methods.EventService
 {
     public class EventAreas : Request
     {

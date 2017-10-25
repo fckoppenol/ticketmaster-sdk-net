@@ -3,16 +3,16 @@ using System.Net;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using RestSharp;
-using TourSpider.TicketMaster.Api.Interfaces;
-using TourSpider.TicketMaster.Api.Models;
+using Tourspider.Ticketmaster.Sdk.Interfaces;
+using Tourspider.Ticketmaster.Sdk.Models;
 
-namespace TourSpider.Ticketmaster.Sdk
+namespace Tourspider.Ticketmaster.Sdk
 {
     public class DiscoveryClient
     {
         private readonly RestClient _restClient;
 
-        public DiscoveryClient(string apiKey, string baseUrl = "https://app.ticketmaster.eu/mfxapi/v1")
+        public DiscoveryClient(string apiKey, string baseUrl = "https://app.Ticketmaster.eu/mfxapi/v1")
         {
             if (string.IsNullOrEmpty(apiKey))
                 throw new ArgumentNullException(apiKey);
@@ -20,7 +20,7 @@ namespace TourSpider.Ticketmaster.Sdk
             if (string.IsNullOrEmpty(baseUrl))
                 throw new ArgumentNullException(baseUrl);
 
-            _restClient = new RestClient(new Uri(baseUrl)) { Authenticator = new TicketMasterAuthenticator(apiKey) };
+            _restClient = new RestClient(new Uri(baseUrl)) { Authenticator = new TicketmasterAuthenticator(apiKey) };
             _restClient.AddDefaultHeader("Accept", "application/json");
         }
 

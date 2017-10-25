@@ -1,9 +1,9 @@
 ﻿using System;
-using TourSpider.Ticketmaster.Sdk;
-using TourSpider.TicketMaster.Api.Extensions;
-using TourSpider.TicketMaster.Api.Interfaces;
+using Tourspider.Ticketmaster.Sdk;
+using Tourspider.Ticketmaster.Sdk.Extensions;
+using Tourspider.Ticketmaster.Sdk.Interfaces;
 
-namespace TourSpider.Ticketmaster.Sdk.Methods.EventService
+namespace Tourspider.Ticketmaster.Sdk.Methods.EventService
 {
     public class UpdatedEvents : Request
     {

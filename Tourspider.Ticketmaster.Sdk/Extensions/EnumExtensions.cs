@@ -3,7 +3,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization;
 
-namespace TourSpider.Ticketmaster.Sdk.Extensions
+namespace Tourspider.Ticketmaster.Sdk.Extensions
 {
     public static class EnumExtensions
     {
