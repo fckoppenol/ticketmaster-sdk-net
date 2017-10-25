@@ -2,7 +2,7 @@
 
 https://developer.ticketmaster.com/products-and-docs/apis/international-discovery/
 
-```
+```c#
   var discoveryClient = new DiscoveryClient({apiKey});
 
   var arguments = new EventSearchArguments{
