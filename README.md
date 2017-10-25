@@ -1,7 +1,7 @@
 # ticketmaster-sdk-net
 
 ```
-  var discoveryClient = new DiscoveryClient("3fMpxk4EmTds3GaRJK4bfNiTAKx4zNGm");
+  var discoveryClient = new DiscoveryClient({apiKey});
 
   var arguments = new EventSearchArguments{
       DomainIds = new List<string> { "netherlands" },
