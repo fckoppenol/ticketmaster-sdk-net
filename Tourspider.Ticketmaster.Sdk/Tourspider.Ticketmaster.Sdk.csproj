@@ -50,7 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DiscoveryClient.cs" />
+    <Compile Include="InternationalDiscoveryClient.cs" />
     <Compile Include="Extensions\EnumExtensions.cs" />
     <Compile Include="Extensions\MethodExtensions.cs" />
     <Compile Include="Interfaces\IRequestParameters.cs" />

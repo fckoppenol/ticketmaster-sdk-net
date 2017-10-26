@@ -78,6 +78,17 @@ namespace Tourspider.Ticketmaster.Sdk.Methods.EventService
         public string EventName { private get; set; }
 
         /// <summary>
+        /// The unique identifer for the Country. 
+        /// This is the geographical location, whereas Domain relates to the market. Use a comma separated list of values to search multiple Countries (A logical OR search is performed). Example: 539.
+        /// </summary>
+        public List<string> CountryIds { private get; set; } = new List<string>();
+
+        /// <summary>
+        /// The postal code or zip code. Example: 0151.
+        /// </summary>
+        public string PostalCode { private get; set; }
+
+        /// <summary>
         /// The latitude of the required search location. Example: 59.9047.
         /// </summary>
         public double? Latitude { private get; set; }
@@ -116,24 +127,54 @@ namespace Tourspider.Ticketmaster.Sdk.Methods.EventService
         /// The date should be in format yyyy-MM-dd’T’HH:mm:ssZ.
         /// </summary>
         public DateTime? OnSaleDateTo { private get; set; }
-        
+
+
         /// <summary>
-        /// A flag which when set to ‘true’ returns external events, which were events from other 
-        /// Ticketmaster platforms or partners with a more limited set of data fields in the response.
+        /// The start date of the event for a date range search. Dates are always given in UTC. The date should be in format yyyy-MM-dd’T’HH:mm:ssZ. Example: 2015-02-01T10:00:00Z.
         /// </summary>
-        public bool? IncludeExternalEvents { private get; set; }
+        public DateTime? OffSaleDateFrom { private get; set; }
+
+        /// <summary>
+        /// The end date of the event for a date range search. Dates are always given in UTC. The date should be in format yyyy-MM-dd’T’HH:mm:ssZ.
+        /// </summary>
+        public DateTime? OffSaleDateTo { private get; set; }
+
+        /// <summary>
+        /// The minimum price for tickets.
+        /// </summary>
+        public int? MinPrice { private get; set; }
+
+        /// <summary>
+        /// The maximum price for tickets.
+        /// </summary>
+        public int? MaxPrice { private get; set; }
+
+        /// <summary>
+        /// A flag to indicate whether fees are included in the minimum and maximum price. Default: false.
+        /// </summary>
+        public bool? PriceExcludingFees { private get; set; }
 
         /// <summary>
         /// A flag which when set to ‘true’ gives only events which still have tickets available on sale.
         /// </summary>
         public bool? IsSeatsAvailable { private get; set; }
-        
+
+        /// <summary>
+        /// 	A flag which when set to ‘true’ gives only events have not been cancelled or rescheduled.
+        /// </summary>
         public bool? IsNotCancelled { private get; set; }
 
+        /// <summary>
+        /// A flag which when set to ‘true’ gives only events which are not a package event.
+        /// </summary>
         public bool? IsNotPackage { private get; set; }
 
-        public int? CountryId { private get; set; }
-
+        /// <summary>
+        /// A flag which when set to ‘true’ returns external events, which were events from other 
+        /// Ticketmaster platforms or partners with a more limited set of data fields in the response.
+        /// </summary>
+        public bool? IncludeExternalEvents { private get; set; }
+        
         /// <summary>
         /// The method for sorting the results. Proximity can only be used where a lat and long is used as a query parameter. 
         /// Default: eventdate. Possible values: eventdate , eventname , popularity , proximity .
@@ -184,6 +225,8 @@ namespace Tourspider.Ticketmaster.Sdk.Methods.EventService
             restRequest.AddQueryParameterIfNotEmpty("category_ids", CategoryIds);
             restRequest.AddQueryParameterIfNotEmpty("subcategory_ids", SubCategoryIds);
             restRequest.AddQueryParameterIfNotEmpty("event_name", EventName);
+            restRequest.AddQueryParameterIfNotEmpty("country_ids", CountryIds);
+            restRequest.AddQueryParameterIfNotEmpty("postal_code", PostalCode);
             restRequest.AddQueryParameterIfNotEmpty("lat", Latitude);
             restRequest.AddQueryParameterIfNotEmpty("long", Longitude);
             restRequest.AddQueryParameterIfNotEmpty("radius", RadiusInKm);
@@ -191,11 +234,15 @@ namespace Tourspider.Ticketmaster.Sdk.Methods.EventService
             restRequest.AddQueryParameterIfNotEmpty("eventdate_to", EventDateTo);
             restRequest.AddQueryParameterIfNotEmpty("onsaledate_from", OnSaleDateFrom);
             restRequest.AddQueryParameterIfNotEmpty("onsaledate_to", OnSaleDateTo);
-            restRequest.AddQueryParameterIfNotEmpty("include_external_events", IncludeExternalEvents);
+            restRequest.AddQueryParameterIfNotEmpty("offsaledate_from", OffSaleDateFrom);
+            restRequest.AddQueryParameterIfNotEmpty("offsaledate_to", OffSaleDateTo);
+            restRequest.AddQueryParameterIfNotEmpty("min_price", MinPrice);
+            restRequest.AddQueryParameterIfNotEmpty("max_price", MaxPrice);
+            restRequest.AddQueryParameterIfNotEmpty("price_excl_fees", PriceExcludingFees);
             restRequest.AddQueryParameterIfNotEmpty("is_seats_available", IsSeatsAvailable);
-            restRequest.AddQueryParameterIfNotEmpty("is_not_cancelled", IsNotCancelled); 
+            restRequest.AddQueryParameterIfNotEmpty("is_not_cancelled", IsNotCancelled);
             restRequest.AddQueryParameterIfNotEmpty("is_not_package", IsNotPackage);
-            restRequest.AddQueryParameterIfNotEmpty("country_id", CountryId);
+            restRequest.AddQueryParameterIfNotEmpty("include_external_events", IncludeExternalEvents);
             restRequest.AddQueryParameterIfNotEmpty("sort_by", SortBy.GetValue());
             restRequest.AddQueryParameterIfNotEmpty("order", Order.GetValue());
             restRequest.AddQueryParameterIfNotEmpty("start", _start);

@@ -8,11 +8,11 @@ using Tourspider.Ticketmaster.Sdk.Models;
 
 namespace Tourspider.Ticketmaster.Sdk
 {
-    public class DiscoveryClient
+    public class InternationalDiscoveryClient
     {
         private readonly RestClient _restClient;
 
-        public DiscoveryClient(string apiKey, string baseUrl = "https://app.Ticketmaster.eu/mfxapi/v1")
+        public InternationalDiscoveryClient(string apiKey, string baseUrl = "https://app.Ticketmaster.eu/mfxapi/v1")
         {
             if (string.IsNullOrEmpty(apiKey))
                 throw new ArgumentNullException(apiKey);
@@ -22,6 +22,11 @@ namespace Tourspider.Ticketmaster.Sdk
 
             _restClient = new RestClient(new Uri(baseUrl)) { Authenticator = new TicketmasterAuthenticator(apiKey) };
             _restClient.AddDefaultHeader("Accept", "application/json");
+        }
+
+        public WebProxy WebProxy
+        {
+            set => _restClient.Proxy = value;
         }
 
         public Response<T2> Query<T1, T2>(IRequestParameters requestParameters)
@@ -71,6 +76,7 @@ namespace Tourspider.Ticketmaster.Sdk
 
             restRequest = new RestRequest(method.Resource);
             requestParameters.AddToRequest(restRequest);
+
             return method;
         }
     }
