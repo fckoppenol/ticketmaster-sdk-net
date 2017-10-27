@@ -3,7 +3,7 @@
 https://developer.ticketmaster.com/products-and-docs/apis/international-discovery/
 
 ```c#
-  var discoveryClient = new DiscoveryClient({apiKey});
+  var client = new InternationalDiscoveryClient({apiKey});
 
   var arguments = new EventSearchArguments{
       DomainIds = new List<string> { "netherlands" },
@@ -15,6 +15,6 @@ https://developer.ticketmaster.com/products-and-docs/apis/international-discover
       Rows = 250
   };
 
-  var events = await discoveryClient.EventSearchAsync(arguments);
+  var events = await client.EventSearchAsync(arguments);
 
 ```
